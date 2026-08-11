@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Aboard - Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="app-body">
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <i data-lucide="ship"></i>
+                <span>ALL ABOARD</span>
+            </div>
+            <div id="roleBadgeContainer" class="role-badge-container"></div>
+            <nav class="main-nav">
+                <a href="#" data-nav="inicio" class="active">Inicio</a>
+                <a href="#" data-nav="tramites">Trámites</a>
+                <a href="#" data-nav="capacitaciones">Capacitaciones</a>
+            </nav>
+        </div>
+        <div class="nav-right">
+            <button class="icon-btn"><i data-lucide="search"></i></button>
+            <button class="icon-btn bell-btn">
+                <i data-lucide="bell"></i>
+                <span class="badge-dot"></span>
+            </button>
+            <button class="icon-btn"><i data-lucide="user"></i></button>
+            <button class="icon-btn" id="settingsBtn" title="Opciones / Cerrar Sesión"><i data-lucide="settings"></i></button>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <!-- Sidebar content injected via JS based on current section and role -->
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Dynamic content injected here -->
+        </main>
+    </div>
+
+    <!-- Modals Container -->
+    <div id="modalContainer" class="modal-overlay hidden">
+        <div id="modalContent" class="modal-content">
+            <!-- Modal injected here -->
+        </div>
+    </div>
+
+    <!-- Dropdown menu for settings/logout -->
+    <div id="settingsDropdown" class="dropdown-menu hidden">
+        <div class="dropdown-header">
+            <span id="userNameDisplay">Usuario</span>
+            <small id="userRoleDisplay">Rol</small>
+        </div>
+        <button id="profileBtn" class="dropdown-item">
+            <i data-lucide="user-circle"></i> Mi Perfil
+        </button>
+        <button id="logoutBtn" class="dropdown-item">
+            <i data-lucide="log-out"></i> Cerrar sesión
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
