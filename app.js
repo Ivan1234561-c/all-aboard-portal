@@ -25,7 +25,11 @@ function getStore() {
 }
 
 function saveStore(data) {
-    localStorage.setItem(STORE_KEY, JSON.stringify(data));
+    try {
+        localStorage.setItem(STORE_KEY, JSON.stringify(data));
+    } catch(e) {
+        console.error("Local storage error:", e);
+    }
 }
 
 // --- LOGIN LOGIC ---
@@ -942,6 +946,7 @@ if (mainContent && sidebar) {
             
             return;
         }
+        else if (currentSidebarView === 'emp_curso_prevencion') {
             mainContent.innerHTML = `
                 <div class="page-header" style="display:flex; align-items:center; gap:16px;">
                     <button class="btn btn-outline" style="padding:8px;" onclick="navigateTo('emp_cursos')"><i data-lucide="arrow-left"></i> Volver</button>
