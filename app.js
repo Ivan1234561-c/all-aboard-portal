@@ -2,8 +2,16 @@ const STORE_KEY = 'allaboard_v3';
 
 // Initialize Store
 function getStore() {
-    const store = localStorage.getItem(STORE_KEY);
-    if (store) return JSON.parse(store);
+    try {
+        const store = localStorage.getItem(STORE_KEY);
+        if (store) {
+            const parsed = JSON.parse(store);
+            if (parsed && typeof parsed === 'object') {
+                return parsed;
+            }
+        }
+    } catch(e) {}
+    
     return {
         role: null,
         name: null,
