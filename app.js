@@ -501,9 +501,9 @@ if (mainContent && sidebar) {
                         <div class="card">
                             <h3 class="card-title" style="margin-bottom:16px;">Recursos rápidos</h3>
                             <div style="display:flex; flex-direction:column; gap:12px;">
-                                <a href="#" style="color:var(--color-secondary2); display:flex; align-items:center; gap:8px;"><i data-lucide="book"></i> Manual del empleado</a>
-                                <a href="#" style="color:var(--color-secondary2); display:flex; align-items:center; gap:8px;"><i data-lucide="users"></i> Organigrama</a>
-                                <a href="#" style="color:var(--color-secondary2); display:flex; align-items:center; gap:8px;"><i data-lucide="contact"></i> Directorio</a>
+                                <a href="#" onclick="alert('Abriendo Manual del empleado...'); return false;" style="color:var(--color-secondary2); display:flex; align-items:center; gap:8px;"><i data-lucide="book"></i> Manual del empleado</a>
+                                <a href="#" onclick="alert('Abriendo Organigrama corporativo...'); return false;" style="color:var(--color-secondary2); display:flex; align-items:center; gap:8px;"><i data-lucide="users"></i> Organigrama</a>
+                                <a href="#" onclick="alert('Abriendo Directorio de contactos...'); return false;" style="color:var(--color-secondary2); display:flex; align-items:center; gap:8px;"><i data-lucide="contact"></i> Directorio</a>
                             </div>
                         </div>
                     </div>
