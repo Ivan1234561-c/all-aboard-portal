@@ -621,15 +621,15 @@ if (mainContent && sidebar) {
                     <h1 class="page-title text-blue">Tus Cursos</h1>
                     <p class="page-subtitle">Selecciona un curso para ver el temario y comenzar a aprender.</p>
                 </div>
-                <div class="grid-2col" style="gap:24px;">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch;">
                     <!-- ISO 9001 Card -->
-                    <div class="card" style="padding:0; overflow:hidden; display:flex; flex-direction:column; cursor:pointer; border:1px solid #bfdbfe; transition:transform 0.2s;" onclick="navigateTo('emp_curso_iso9001')" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="background:linear-gradient(135deg, #1e3a8a, #3b82f6); padding:24px; color:white;">
-                            <i data-lucide="shield-check" style="width:32px; height:32px; margin-bottom:12px;"></i>
-                            <h3 style="font-size:1.1rem; margin-bottom:4px;">Introducción a ISO 9001</h3>
-                            <p style="font-size:0.85rem; opacity:0.9;">Sistema de Gestión de Calidad</p>
+                    <div style="border-radius:12px; overflow:hidden; display:flex; flex-direction:column; cursor:pointer; border:1px solid #bfdbfe; box-shadow:0 2px 8px rgba(0,0,0,0.07); transition:transform 0.2s;" onclick="navigateTo('emp_curso_iso9001')" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="background:linear-gradient(135deg, #1e3a8a, #3b82f6); padding:28px 24px; color:white;">
+                            <i data-lucide="shield-check" style="width:36px; height:36px; margin-bottom:14px; display:block;"></i>
+                            <h3 style="font-size:1.15rem; margin-bottom:6px; color:#ffffff; font-weight:700;">Introducción a ISO 9001</h3>
+                            <p style="font-size:0.85rem; color:rgba(255,255,255,0.88); margin:0;">Sistema de Gestión de Calidad</p>
                         </div>
-                        <div style="padding:20px; flex:1; display:flex; flex-direction:column;">
+                        <div style="padding:20px; flex:1; display:flex; flex-direction:column; background:#fff;">
                             <p class="text-muted" style="font-size:0.9rem; margin-bottom:16px; flex:1;">Comprende los fundamentos de la norma ISO 9001 y su aplicación en la empresa.</p>
                             <div style="display:flex; justify-content:space-between; align-items:center;">
                                 <span class="badge badge-blue">4 Módulos</span>
@@ -637,15 +637,14 @@ if (mainContent && sidebar) {
                             </div>
                         </div>
                     </div>
-                    
                     <!-- Prevención Card -->
-                    <div class="card" style="padding:0; overflow:hidden; display:flex; flex-direction:column; cursor:pointer; border:1px solid #99f6e4; transition:transform 0.2s;" onclick="navigateTo('emp_curso_prevencion')" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="background:linear-gradient(135deg, #0f766e, #14b8a6); padding:24px; color:white;">
-                            <i data-lucide="hard-hat" style="width:32px; height:32px; margin-bottom:12px;"></i>
-                            <h3 style="font-size:1.1rem; margin-bottom:4px;">Prevención de Riesgos</h3>
-                            <p style="font-size:0.85rem; opacity:0.9;">Seguridad Laboral Básica</p>
+                    <div style="border-radius:12px; overflow:hidden; display:flex; flex-direction:column; cursor:pointer; border:1px solid #99f6e4; box-shadow:0 2px 8px rgba(0,0,0,0.07); transition:transform 0.2s;" onclick="navigateTo('emp_curso_prevencion')" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="background:linear-gradient(135deg, #0f766e, #14b8a6); padding:28px 24px; color:white;">
+                            <i data-lucide="hard-hat" style="width:36px; height:36px; margin-bottom:14px; display:block;"></i>
+                            <h3 style="font-size:1.15rem; margin-bottom:6px; color:#ffffff; font-weight:700;">Prevención de Riesgos</h3>
+                            <p style="font-size:0.85rem; color:rgba(255,255,255,0.88); margin:0;">Seguridad Laboral Básica</p>
                         </div>
-                        <div style="padding:20px; flex:1; display:flex; flex-direction:column;">
+                        <div style="padding:20px; flex:1; display:flex; flex-direction:column; background:#fff;">
                             <p class="text-muted" style="font-size:0.9rem; margin-bottom:16px; flex:1;">Conoce los protocolos de seguridad y prevención de accidentes en tu área de trabajo.</p>
                             <div style="display:flex; justify-content:space-between; align-items:center;">
                                 <span class="badge" style="background:#ccfbf1; color:#0f766e;">4 Módulos</span>
@@ -756,124 +755,252 @@ if (mainContent && sidebar) {
 
             const isoData = {
                 1: `
-                    <h2 style="font-size:1.8rem; color:var(--primary-blue); margin-bottom:20px;">Módulo 1: Introducción a la Calidad y la ISO 9001</h2>
-                    <h3 style="font-size:1.2rem; margin-top:24px; margin-bottom:12px;">¿Qué es la Calidad?</h3>
-                    <p style="margin-bottom:16px; line-height:1.6; color:var(--color-text);">La calidad no es solo cumplir con especificaciones técnicas; es satisfacer y superar las expectativas del cliente. Implica hacer las cosas bien desde la primera vez, reducir el desperdicio y buscar siempre la manera de mejorar. En All Aboard, la calidad es el pilar que sostiene la confianza de nuestros clientes.</p>
-                    
-                    <h3 style="font-size:1.2rem; margin-top:24px; margin-bottom:12px;">¿Qué es la ISO 9001?</h3>
-                    <p style="margin-bottom:16px; line-height:1.6; color:var(--color-text);">Es una norma internacional que establece los requisitos para un Sistema de Gestión de Calidad (SGC). Un SGC es un conjunto de políticas, procesos y procedimientos que nos ayudan a asegurar que nuestros servicios cumplen consistentemente con los requisitos del cliente y las regulaciones aplicables.</p>
-                    
-                    <h3 style="font-size:1.2rem; margin-top:24px; margin-bottom:12px;">Beneficios de la ISO 9001</h3>
+                    <h2 style="font-size:1.8rem; color:var(--primary-blue); margin-bottom:8px;">Módulo 1: Introducción a la Calidad y la ISO 9001</h2>
+                    <hr style="border:none; border-top:2px solid #bfdbfe; margin:0 0 24px;">
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">1.1 Historia de la calidad</h3>
+                    <p style="margin-bottom:12px; line-height:1.7; color:var(--color-text);">La calidad ha evolucionado junto con las organizaciones y sus procesos de producción. Inicialmente, la calidad se enfocaba principalmente en inspeccionar los productos terminados para encontrar errores.</p>
+                    <p style="margin-bottom:12px; line-height:1.7; color:var(--color-text);">Con el tiempo, las organizaciones comenzaron a comprender que era más eficiente prevenir los errores desde el proceso que detectarlos al final.</p>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Esta evolución llevó a conceptos como:</p>
+                    <ul class="bullet-list" style="margin-bottom:16px;">
+                        <li>Inspección de productos.</li>
+                        <li>Control de calidad.</li>
+                        <li>Aseguramiento de la calidad.</li>
+                        <li>Gestión de la calidad.</li>
+                        <li>Mejora continua.</li>
+                    </ul>
+                    <p style="margin-bottom:20px; line-height:1.7; color:var(--color-text);">Actualmente, la calidad no depende únicamente de revisar un producto o servicio. Involucra a toda la organización y sus procesos.</p>
+                    <div style="background:#EEF4FF; border-left:4px solid #1a56db; border-radius:6px; padding:14px 18px; margin-bottom:24px;">
+                        <strong style="color:#1e3a8a;">💡 Idea clave</strong>
+                        <p style="margin:6px 0 0; color:#1e3a8a; font-size:0.95rem;">La calidad no consiste solamente en detectar errores, sino en establecer procesos que permitan prevenirlos y mejorar continuamente.</p>
+                    </div>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">1.2 ¿Qué es la ISO 9001?</h3>
+                    <p style="margin-bottom:12px; line-height:1.7; color:var(--color-text);">ISO 9001 es una norma internacional que establece requisitos para implementar un Sistema de Gestión de la Calidad (SGC).</p>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Su propósito es ayudar a las organizaciones a establecer procesos que permitan:</p>
+                    <ul class="bullet-list" style="margin-bottom:16px;">
+                        <li>Cumplir los requisitos de los clientes.</li>
+                        <li>Cumplir los requisitos aplicables.</li>
+                        <li>Controlar y mejorar los procesos.</li>
+                        <li>Identificar riesgos y oportunidades.</li>
+                        <li>Aumentar la satisfacción del cliente.</li>
+                        <li>Mejorar continuamente el desempeño.</li>
+                    </ul>
+                    <div style="background:#FFF8E8; border-left:4px solid #D97706; border-radius:6px; padding:14px 18px; margin-bottom:24px;">
+                        <strong style="color:#92400e;">⚠ Importante</strong>
+                        <p style="margin:6px 0 0; color:#92400e; font-size:0.95rem;">ISO 9001 no establece cómo debe fabricarse un producto específico. Establece requisitos para gestionar la calidad de los procesos de una organización.</p>
+                    </div>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">1.3 Beneficios de la certificación</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Implementar un SGC basado en ISO 9001 puede proporcionar diferentes beneficios:</p>
                     <ul class="bullet-list" style="margin-bottom:32px;">
-                        <li>Mayor satisfacción del cliente al entregar productos/servicios confiables.</li>
-                        <li>Procesos más eficientes y reducción de errores.</li>
-                        <li>Mejora de la comunicación interna y el compromiso del personal.</li>
-                        <li>Ventaja competitiva en el mercado (muchos clientes exigen proveedores certificados).</li>
+                        <li>Mayor satisfacción del cliente.</li>
+                        <li>Procesos más organizados.</li>
+                        <li>Reducción de errores y desperdicios.</li>
+                        <li>Mejor identificación de riesgos.</li>
+                        <li>Mayor control de las actividades.</li>
+                        <li>Mejora continua.</li>
+                        <li>Mayor confianza de clientes y partes interesadas.</li>
                     </ul>
 
-                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:24px;">
-                        <h3 style="color:#0f172a; margin-bottom:16px;"><i data-lucide="help-circle" style="color:var(--primary-blue);"></i> Quiz: Módulo 1</h3>
-                        <p style="font-weight:600; margin-bottom:12px;">1. ¿Qué significa la calidad en el contexto de ISO 9001?</p>
-                        <div style="display:flex; flex-direction:column; gap:8px;">
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">a) Cumplir con especificaciones técnicas solamente.</button>
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">b) Reducir costos a cualquier precio.</button>
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true)">c) Satisfacer y superar las expectativas del cliente.</button>
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:24px; margin-bottom:16px;">
+                        <h3 style="color:#0f172a; margin-bottom:20px; display:flex; align-items:center; gap:8px;"><i data-lucide="help-circle" style="color:var(--primary-blue); width:20px; height:20px;"></i> 🧠 Quiz — Módulo 1</h3>
+                        <div style="margin-bottom:24px;">
+                            <p style="font-weight:600; margin-bottom:12px;">Pregunta 1. ¿Cuál es uno de los principales objetivos de ISO 9001?</p>
+                            <div style="display:flex; flex-direction:column; gap:8px;">
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">A) Crear productos idénticos para todas las empresas.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true)">B) Establecer requisitos para un Sistema de Gestión de Calidad.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">C) Sustituir a todos los empleados por procesos automatizados.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">D) Eliminar completamente todos los riesgos.</button>
+                            </div>
+                        </div>
+                        <div>
+                            <p style="font-weight:600; margin-bottom:12px;">Pregunta 2. ¿Cómo ha evolucionado principalmente el concepto de calidad?</p>
+                            <div style="display:flex; flex-direction:column; gap:8px;">
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">A) De la prevención a la inspección.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">B) De la producción a las ventas.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true)">C) De la inspección hacia la prevención y mejora continua.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">D) De la tecnología hacia el trabajo manual.</button>
+                            </div>
                         </div>
                     </div>
                 `,
                 2: `
-                    <h2 style="font-size:1.8rem; color:var(--primary-blue); margin-bottom:20px;">Módulo 2: Principios de Gestión de la Calidad</h2>
-                    <p style="margin-bottom:20px; line-height:1.6; color:var(--color-text);">La ISO 9001 se basa en siete principios fundamentales que guían a la organización hacia la excelencia:</p>
-                    <ol style="margin-bottom:32px; padding-left:20px; line-height:1.6; color:var(--color-text);">
-                        <li style="margin-bottom:12px;"><strong>Enfoque al cliente:</strong> Entender y satisfacer las necesidades de los clientes es el objetivo principal.</li>
-                        <li style="margin-bottom:12px;"><strong>Liderazgo:</strong> Los líderes establecen el propósito y la dirección, creando un ambiente donde el personal se involucra en lograr los objetivos de calidad.</li>
-                        <li style="margin-bottom:12px;"><strong>Compromiso de las personas:</strong> Personal competente, empoderado y comprometido en todos los niveles.</li>
-                        <li style="margin-bottom:12px;"><strong>Enfoque a procesos:</strong> Entender que los resultados se alcanzan más eficientemente cuando las actividades se gestionan como procesos interrelacionados.</li>
-                        <li style="margin-bottom:12px;"><strong>Mejora:</strong> Las organizaciones exitosas tienen un enfoque continuo en la mejora.</li>
-                        <li style="margin-bottom:12px;"><strong>Toma de decisiones basada en evidencia:</strong> Las decisiones basadas en el análisis y evaluación de datos tienen mayor probabilidad de producir los resultados deseados.</li>
-                        <li style="margin-bottom:12px;"><strong>Gestión de las relaciones:</strong> Para el éxito sostenido, se deben gestionar las relaciones con las partes interesadas, como los proveedores.</li>
-                    </ol>
+                    <h2 style="font-size:1.8rem; color:var(--primary-blue); margin-bottom:8px;">Módulo 2: Principios de Gestión de la Calidad</h2>
+                    <hr style="border:none; border-top:2px solid #bfdbfe; margin:0 0 24px;">
 
-                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:24px;">
-                        <h3 style="color:#0f172a; margin-bottom:16px;"><i data-lucide="help-circle" style="color:var(--primary-blue);"></i> Quiz: Módulo 2</h3>
-                        <p style="font-weight:600; margin-bottom:12px;">1. ¿Qué principio de gestión enfatiza la importancia de comprender y satisfacer las necesidades actuales y futuras?</p>
-                        <div style="display:flex; flex-direction:column; gap:8px;">
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">a) Liderazgo</button>
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true)">b) Enfoque al cliente</button>
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">c) Mejora</button>
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">2.1 Enfoque al cliente</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Las organizaciones dependen de sus clientes, por lo que deben comprender sus necesidades y expectativas. El enfoque al cliente implica:</p>
+                    <ul class="bullet-list" style="margin-bottom:20px;"><li>Conocer sus necesidades.</li><li>Cumplir los requisitos acordados.</li><li>Evaluar su satisfacción.</li><li>Atender sus comentarios.</li><li>Buscar oportunidades para mejorar su experiencia.</li></ul>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">2.2 Liderazgo</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">El liderazgo permite establecer una dirección común para la organización. Los líderes deben:</p>
+                    <ul class="bullet-list" style="margin-bottom:20px;"><li>Establecer objetivos.</li><li>Promover la política de calidad.</li><li>Asignar responsabilidades.</li><li>Proporcionar recursos.</li><li>Promover la mejora.</li><li>Fomentar una cultura orientada a la calidad.</li></ul>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">2.3 Compromiso de las personas</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Las personas son fundamentales para el funcionamiento de cualquier organización. Para lograr buenos resultados es necesario que las personas:</p>
+                    <ul class="bullet-list" style="margin-bottom:20px;"><li>Comprendan sus responsabilidades.</li><li>Tengan las competencias necesarias.</li><li>Participen en la mejora.</li><li>Comuniquen problemas.</li><li>Propongan soluciones.</li></ul>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">2.4 Enfoque a procesos</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Un proceso es un conjunto de actividades relacionadas que utilizan entradas para producir resultados. Por ejemplo:</p>
+                    <div style="background:#f1f5f9; border-radius:8px; padding:14px 20px; margin-bottom:20px; font-size:0.95rem; color:#334155; display:flex; align-items:center; gap:12px; justify-content:center;">Solicitud → Revisión → Procesamiento → Resultado</div>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">2.5 Mejora</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">La mejora continua busca aumentar el desempeño de la organización. Puede incluir:</p>
+                    <ul class="bullet-list" style="margin-bottom:20px;"><li>Corregir errores.</li><li>Optimizar procesos.</li><li>Reducir tiempos.</li><li>Reducir desperdicios.</li><li>Mejorar productos o servicios.</li></ul>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">2.6 Toma de decisiones basada en evidencia</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Las decisiones deben apoyarse en información y datos confiables. Algunos ejemplos de evidencia son:</p>
+                    <ul class="bullet-list" style="margin-bottom:20px;"><li>Indicadores.</li><li>Resultados de auditorías.</li><li>Encuestas.</li><li>Registros.</li><li>Datos de procesos.</li></ul>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">2.7 Gestión de las relaciones</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Las organizaciones mantienen relaciones con diferentes partes interesadas, como:</p>
+                    <ul class="bullet-list" style="margin-bottom:32px;"><li>Clientes.</li><li>Proveedores.</li><li>Trabajadores.</li><li>Socios.</li><li>Autoridades.</li></ul>
+
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:24px; margin-bottom:16px;">
+                        <h3 style="color:#0f172a; margin-bottom:20px; display:flex; align-items:center; gap:8px;"><i data-lucide="help-circle" style="color:var(--primary-blue); width:20px; height:20px;"></i> 🧠 Quiz — Módulo 2</h3>
+                        <div style="margin-bottom:24px;">
+                            <p style="font-weight:600; margin-bottom:12px;">Pregunta 1. ¿Qué principio busca comprender y satisfacer las necesidades de los clientes?</p>
+                            <div style="display:flex; flex-direction:column; gap:8px;">
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">A) Liderazgo</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">B) Enfoque a procesos</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true)">C) Enfoque al cliente</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">D) Gestión de relaciones</button>
+                            </div>
+                        </div>
+                        <div>
+                            <p style="font-weight:600; margin-bottom:12px;">Pregunta 2. ¿Por qué es importante utilizar evidencia para tomar decisiones?</p>
+                            <div style="display:flex; flex-direction:column; gap:8px;">
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">A) Porque elimina la necesidad de analizar información.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true)">B) Porque permite fundamentar las decisiones en información confiable.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">C) Porque evita establecer objetivos.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">D) Porque sustituye la participación de los trabajadores.</button>
+                            </div>
                         </div>
                     </div>
                 `,
                 3: `
-                    <h2 style="font-size:1.8rem; color:var(--primary-blue); margin-bottom:20px;">Módulo 3: Documentación del SGC</h2>
-                    <p style="margin-bottom:16px; line-height:1.6; color:var(--color-text);">La documentación es vital porque comunica la intención y asegura la consistencia de las acciones. Incluye:</p>
-                    <ul class="bullet-list" style="margin-bottom:32px;">
-                        <li><strong>Política y objetivos de calidad:</strong> La dirección de la empresa en temas de calidad.</li>
-                        <li><strong>Manual de calidad:</strong> Describe cómo funciona nuestro SGC en general.</li>
-                        <li><strong>Procedimientos e instrucciones de trabajo:</strong> El "cómo se hace" paso a paso para asegurar la calidad operativa.</li>
-                        <li><strong>Registros:</strong> Evidencia de que una actividad se realizó (ej. un reporte de inspección, un registro de asistencia).</li>
-                    </ul>
+                    <h2 style="font-size:1.8rem; color:var(--primary-blue); margin-bottom:8px;">Módulo 3: Documentación del Sistema de Gestión de la Calidad</h2>
+                    <hr style="border:none; border-top:2px solid #bfdbfe; margin:0 0 24px;">
 
-                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:24px;">
-                        <h3 style="color:#0f172a; margin-bottom:16px;"><i data-lucide="help-circle" style="color:var(--primary-blue);"></i> Quiz: Módulo 3</h3>
-                        <p style="font-weight:600; margin-bottom:12px;">1. ¿Cuál es el propósito principal de los registros de calidad?</p>
-                        <div style="display:flex; flex-direction:column; gap:8px;">
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">a) Mostrar cómo realizar una tarea específica.</button>
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true)">b) Proporcionar evidencia de que se han realizado las actividades.</button>
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">c) Describir la estructura organizativa.</button>
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">3.1 Documentación de calidad</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">La documentación permite establecer y conservar información necesaria para operar y controlar los procesos. Puede incluir:</p>
+                    <ul class="bullet-list" style="margin-bottom:20px;"><li>Políticas.</li><li>Procedimientos.</li><li>Instrucciones.</li><li>Formatos.</li><li>Registros.</li><li>Manuales.</li><li>Información documentada.</li></ul>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">3.2 Política y objetivos de calidad</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">La política de calidad establece el compromiso general de la organización con la calidad. Los objetivos de calidad permiten convertir ese compromiso en resultados concretos y medibles. Por ejemplo:</p>
+                    <div style="background:#f1f5f9; border-radius:8px; padding:12px 18px; margin-bottom:20px; font-size:0.95rem; color:#334155; font-style:italic;">Mejorar el tiempo de respuesta a las solicitudes de los clientes.</div>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">3.3 Procedimientos e instrucciones de trabajo</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Los procedimientos describen cómo se realizan determinadas actividades o procesos. Las instrucciones de trabajo pueden proporcionar información más específica para realizar una tarea. Por ejemplo:</p>
+                    <div style="background:#f1f5f9; border-radius:8px; padding:12px 18px; margin-bottom:20px; font-size:0.9rem; color:#334155;">
+                        <strong>Procedimiento:</strong> Gestión de equipos.<br>
+                        <strong>Instrucción:</strong> Pasos para registrar un equipo nuevo en el sistema.
+                    </div>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">3.4 Control de documentos y registros</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Los documentos deben mantenerse actualizados y controlados. Es importante conocer:</p>
+                    <ul class="bullet-list" style="margin-bottom:20px;"><li>Qué documento se está utilizando.</li><li>Cuál es su versión vigente.</li><li>Quién puede modificarlo.</li><li>Dónde se encuentra.</li><li>Cómo se conserva.</li><li>Qué ocurre con las versiones obsoletas.</li></ul>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">3.5 Responsabilidades y roles</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Cada persona debe conocer las responsabilidades relacionadas con su función. Esto ayuda a evitar:</p>
+                    <ul class="bullet-list" style="margin-bottom:32px;"><li>Actividades duplicadas.</li><li>Tareas sin responsable.</li><li>Errores por falta de información.</li><li>Confusión en los procesos.</li></ul>
+
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:24px; margin-bottom:16px;">
+                        <h3 style="color:#0f172a; margin-bottom:20px; display:flex; align-items:center; gap:8px;"><i data-lucide="help-circle" style="color:var(--primary-blue); width:20px; height:20px;"></i> 🧠 Quiz — Módulo 3</h3>
+                        <div style="margin-bottom:24px;">
+                            <p style="font-weight:600; margin-bottom:12px;">Pregunta 1. ¿Cuál es el propósito principal de controlar los documentos?</p>
+                            <div style="display:flex; flex-direction:column; gap:8px;">
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">A) Evitar que los empleados consulten información.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true)">B) Garantizar que se utilice información adecuada y actualizada.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">C) Crear más documentos.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">D) Eliminar los registros.</button>
+                            </div>
+                        </div>
+                        <div>
+                            <p style="font-weight:600; margin-bottom:12px;">Pregunta 2. ¿Qué función cumplen los registros?</p>
+                            <div style="display:flex; flex-direction:column; gap:8px;">
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true)">A) Sirven como evidencia de actividades realizadas.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">B) Sustituyen los objetivos de calidad.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">C) Eliminan la necesidad de procedimientos.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">D) Solo sirven para almacenar información antigua.</button>
+                            </div>
                         </div>
                     </div>
                 `,
                 4: `
-                    <h2 style="font-size:1.8rem; color:var(--primary-blue); margin-bottom:20px;">Módulo 4: Auditorías Internas y Mejora Continua</h2>
-                    <h3 style="font-size:1.2rem; margin-top:24px; margin-bottom:12px;">Auditorías Internas</h3>
-                    <p style="margin-bottom:16px; line-height:1.6; color:var(--color-text);">Son revisiones periódicas para comprobar que estamos siguiendo nuestros propios procedimientos y cumpliendo con la ISO 9001. No buscan culpables, sino áreas de oportunidad.</p>
-                    
-                    <h3 style="font-size:1.2rem; margin-top:24px; margin-bottom:12px;">No Conformidades y Acciones Correctivas</h3>
-                    <p style="margin-bottom:16px; line-height:1.6; color:var(--color-text);">Cuando algo no sale según lo planeado, se llama "No Conformidad". La "Acción Correctiva" es investigar por qué ocurrió (la causa raíz) y tomar medidas para que no vuelva a pasar.</p>
+                    <h2 style="font-size:1.8rem; color:var(--primary-blue); margin-bottom:8px;">Módulo 4: Auditorías Internas y Mejora Continua</h2>
+                    <hr style="border:none; border-top:2px solid #bfdbfe; margin:0 0 24px;">
 
-                    <h3 style="font-size:1.2rem; margin-top:24px; margin-bottom:12px;">Mejora Continua</h3>
-                    <p style="margin-bottom:24px; line-height:1.6; color:var(--color-text);">Todos tenemos un rol. Identificar problemas en tu día a día, proponer soluciones y seguir los procedimientos son tus contribuciones clave.</p>
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">4.1 ¿Qué es una auditoría interna?</h3>
+                    <p style="margin-bottom:12px; line-height:1.7; color:var(--color-text);">Una auditoría interna es un proceso sistemático utilizado para obtener y evaluar evidencia con el objetivo de determinar si se cumplen determinados criterios. Una auditoría puede ayudar a identificar:</p>
+                    <ul class="bullet-list" style="margin-bottom:16px;"><li>Cumplimientos.</li><li>Incumplimientos.</li><li>Riesgos.</li><li>Oportunidades de mejora.</li></ul>
+                    <div style="background:#EEF4FF; border-left:4px solid #1a56db; border-radius:6px; padding:14px 18px; margin-bottom:20px;">
+                        <p style="margin:0; color:#1e3a8a; font-size:0.95rem;">Una auditoría no debe entenderse simplemente como una búsqueda de errores o como una forma de sancionar personas.</p>
+                    </div>
 
-                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:24px;">
-                        <h3 style="color:#0f172a; margin-bottom:16px;"><i data-lucide="help-circle" style="color:var(--primary-blue);"></i> Quiz: Módulo 4</h3>
-                        <p style="font-weight:600; margin-bottom:12px;">1. ¿Qué acción se toma para eliminar la causa de una no conformidad detectada y prevenir su recurrencia?</p>
-                        <div style="display:flex; flex-direction:column; gap:8px;">
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">a) Acción preventiva</button>
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true)">b) Acción correctiva</button>
-                            <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">c) Acción de contención</button>
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">4.2 Proceso de auditoría</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Una auditoría normalmente incluye diferentes etapas:</p>
+                    <ul class="bullet-list" style="margin-bottom:20px;"><li>Planificación.</li><li>Preparación.</li><li>Recopilación de evidencias.</li><li>Evaluación.</li><li>Identificación de hallazgos.</li><li>Elaboración del informe.</li><li>Seguimiento.</li></ul>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">4.3 No conformidades y hallazgos</h3>
+                    <p style="margin-bottom:16px; line-height:1.7; color:var(--color-text);">Una no conformidad ocurre cuando no se cumple un requisito establecido. Los hallazgos deben documentarse de manera clara y objetiva, basándose en evidencia, evitando opiniones o suposiciones.</p>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">4.4 Acciones correctivas</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Cuando se presenta una no conformidad, es importante determinar por qué ocurrió. Una acción correctiva busca eliminar la causa para evitar que vuelva a ocurrir:</p>
+                    <div style="background:#f1f5f9; border-radius:8px; padding:12px 20px; margin-bottom:20px; text-align:center; font-size:0.9rem; color:#334155;">Problema → Análisis de causa → Acción → Verificación de eficacia</div>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">4.5 Mejora continua</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">La mejora continua consiste en buscar oportunidades para aumentar el desempeño. Puede apoyarse en:</p>
+                    <ul class="bullet-list" style="margin-bottom:20px;"><li>Resultados de auditorías.</li><li>Indicadores.</li><li>Comentarios de clientes.</li><li>Análisis de riesgos.</li><li>No conformidades.</li><li>Propuestas de los trabajadores.</li></ul>
+
+                    <h3 style="font-size:1.1rem; color:#1e3a8a; margin-top:20px; margin-bottom:10px;">4.6 Responsabilidad individual en la calidad</h3>
+                    <p style="margin-bottom:8px; line-height:1.7; color:var(--color-text);">Cada integrante de la organización influye en la calidad. Algunas acciones importantes son:</p>
+                    <ul class="bullet-list" style="margin-bottom:32px;"><li>Seguir los procedimientos establecidos.</li><li>Reportar problemas.</li><li>Mantener registros adecuados.</li><li>Proponer mejoras.</li><li>Participar en auditorías cuando corresponda.</li><li>Cumplir las responsabilidades asignadas.</li></ul>
+
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:24px; margin-bottom:16px;">
+                        <h3 style="color:#0f172a; margin-bottom:20px; display:flex; align-items:center; gap:8px;"><i data-lucide="help-circle" style="color:var(--primary-blue); width:20px; height:20px;"></i> 🧠 Quiz — Módulo 4</h3>
+                        <div>
+                            <p style="font-weight:600; margin-bottom:12px;">¿Qué acción se toma para eliminar la causa de una no conformidad detectada?</p>
+                            <div style="display:flex; flex-direction:column; gap:8px;">
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">A) Acción preventiva</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true)">B) Acción correctiva</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">C) Acción de contención</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">D) Auditoría interna</button>
+                            </div>
                         </div>
                     </div>
                 `,
                 5: `
-                    <h2 style="font-size:1.8rem; color:#1e3a8a; margin-bottom:20px;">Examen Final - ISO 9001</h2>
-                    <p style="margin-bottom:32px; line-height:1.6; color:var(--color-text);">Responde las siguientes 3 preguntas para completar este curso.</p>
-                    
-                    <div style="display:flex; flex-direction:column; gap:32px;">
-                        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:24px;">
-                            <p style="font-weight:600; margin-bottom:12px;">1. La norma ISO 9001 se centra principalmente en:</p>
+                    <h2 style="font-size:1.8rem; color:#1e3a8a; margin-bottom:8px;">📝 Quiz Final — ISO 9001</h2>
+                    <hr style="border:none; border-top:2px solid #bfdbfe; margin:0 0 20px;">
+                    <p style="margin-bottom:32px; line-height:1.6; color:var(--color-text);">Responde las siguientes preguntas para completar el curso. Necesitas responder correctamente todas para aprobar.</p>
+                    <div style="display:flex; flex-direction:column; gap:28px;">
+                        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:24px;">
+                            <p style="font-weight:600; margin-bottom:12px;">1. ¿Qué busca principalmente un Sistema de Gestión de Calidad?</p>
                             <div style="display:flex; flex-direction:column; gap:8px;">
-                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">a) Gestión ambiental</button>
-                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true, true)">b) Sistema de Gestión de Calidad</button>
-                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">c) Seguridad y salud ocupacional</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">A) Evitar cualquier cambio en los procesos.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true, true)">B) Gestionar y mejorar los procesos para cumplir requisitos y aumentar el desempeño.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">C) Crear únicamente documentos.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">D) Realizar auditorías todos los días.</button>
                             </div>
                         </div>
-
-                        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:24px;">
-                            <p style="font-weight:600; margin-bottom:12px;">2. ¿Cuál NO es un principio de gestión de la calidad según ISO 9001?</p>
+                        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:24px;">
+                            <p style="font-weight:600; margin-bottom:12px;">2. ¿Qué debe hacer una organización ante una no conformidad?</p>
                             <div style="display:flex; flex-direction:column; gap:8px;">
-                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">a) Liderazgo</button>
-                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">b) Enfoque al cliente</button>
-                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true, true)">c) Maximización de beneficios</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">A) Ignorarla.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">B) Ocultarla.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true, true)">C) Analizarla y establecer acciones apropiadas.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">D) Eliminar el registro.</button>
                             </div>
                         </div>
-
-                        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:24px;">
-                            <p style="font-weight:600; margin-bottom:12px;">3. Una "no conformidad" se refiere a:</p>
+                        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:24px;">
+                            <p style="font-weight:600; margin-bottom:12px;">3. ¿Quién es responsable de la calidad?</p>
                             <div style="display:flex; flex-direction:column; gap:8px;">
-                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true, true)">a) Un incumplimiento de un requisito</button>
-                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">b) Una sugerencia de mejora</button>
-                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">c) Un cliente insatisfecho</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">A) Únicamente el auditor.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">B) Únicamente el gerente.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, false)">C) Únicamente el área de calidad.</button>
+                                <button class="btn btn-outline" style="justify-content:flex-start; text-align:left;" onclick="checkAnswer(this, true, true)">D) Todas las personas dentro de sus responsabilidades.</button>
                             </div>
                         </div>
                     </div>
@@ -952,7 +1079,7 @@ if (mainContent && sidebar) {
                     <button class="btn btn-outline" style="padding:8px;" onclick="navigateTo('emp_cursos')"><i data-lucide="arrow-left"></i> Volver</button>
                     <div>
                         <h1 class="page-title" style="color:#0f766e;">Prevención de Riesgos Laborales</h1>
-                        <p class="page-subtitle">Seguridad Laboral Básica</p>
+                        <p class="page-subtitle">Seguridad y Salud en el Trabajo</p>
                     </div>
                 </div>
                 <div class="card" style="margin-bottom:24px;">
@@ -960,48 +1087,59 @@ if (mainContent && sidebar) {
                         <h3 class="card-title">Descripción del curso</h3>
                         <button class="btn" style="background:#0f766e; color:white; border:none;" onclick="navigateTo('emp_visor_prevencion')">Comenzar Curso</button>
                     </div>
-                    <p class="text-muted">Este curso está diseñado para dotar a los empleados de los conocimientos fundamentales sobre seguridad en el entorno laboral. Aprenderás a identificar riesgos, usar equipos de protección y responder ante emergencias.</p>
+                    <p class="text-muted">Este curso te proporcionará los conocimientos fundamentales para identificar, prevenir y controlar los riesgos presentes en el entorno laboral. Aprenderás sobre seguridad, prevención de accidentes, uso adecuado de equipos y la importancia de mantener un ambiente de trabajo seguro para todos.</p>
                 </div>
                 <div class="card">
-                    <h3 class="card-title" style="margin-bottom:16px;">Temario del curso</h3>
+                    <h3 class="card-title" style="margin-bottom:16px;">Módulos del curso</h3>
                     <div class="module-list">
                         <div class="module-item open" onclick="this.classList.toggle('open')">
-                            <div class="module-header">Módulo 1: Introducción a la Seguridad y Salud en el Trabajo <i data-lucide="chevron-down"></i></div>
+                            <div class="module-header">Módulo 1: Introducción a la Prevención de Riesgos Laborales <i data-lucide="chevron-down"></i></div>
                             <div class="module-content">
                                 <ul class="bullet-list">
-                                    <li>Conceptos Básicos de Seguridad</li>
-                                    <li>Marco Legal y Normativo</li>
-                                    <li>Responsabilidades del Empleador y del Empleado</li>
+                                    <li>Conceptos básicos de seguridad laboral</li>
+                                    <li>Importancia de la prevención</li>
+                                    <li>Tipos de riesgos laborales</li>
+                                    <li>Accidentes e incidentes de trabajo</li>
+                                    <li>Responsabilidades en materia de seguridad</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="module-item" onclick="this.classList.toggle('open')">
-                            <div class="module-header">Módulo 2: Identificación y Evaluación de Riesgos Laborales <i data-lucide="chevron-down"></i></div>
+                            <div class="module-header">Módulo 2: Identificación y Evaluación de Riesgos <i data-lucide="chevron-down"></i></div>
                             <div class="module-content">
                                 <ul class="bullet-list">
-                                    <li>Tipos de Riesgos</li>
-                                    <li>Proceso de Evaluación de Riesgos</li>
-                                    <li>Medidas Preventivas</li>
+                                    <li>Identificación de peligros</li>
+                                    <li>Evaluación de riesgos</li>
+                                    <li>Riesgos físicos</li>
+                                    <li>Riesgos químicos y biológicos</li>
+                                    <li>Riesgos ergonómicos</li>
+                                    <li>Riesgos psicosociales</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="module-item" onclick="this.classList.toggle('open')">
-                            <div class="module-header">Módulo 3: Equipos de Protección y Seguridad en el Entorno Laboral <i data-lucide="chevron-down"></i></div>
+                            <div class="module-header">Módulo 3: Medidas de Prevención y Protección <i data-lucide="chevron-down"></i></div>
                             <div class="module-content">
                                 <ul class="bullet-list">
-                                    <li>Equipos de Protección Personal (EPP)</li>
-                                    <li>Seguridad en el Manejo de Herramientas y Maquinaria</li>
-                                    <li>Prevención de Incendios</li>
+                                    <li>Medidas preventivas</li>
+                                    <li>Equipos de protección personal</li>
+                                    <li>Señalización de seguridad</li>
+                                    <li>Orden y limpieza</li>
+                                    <li>Procedimientos de trabajo seguro</li>
+                                    <li>Manejo seguro de herramientas y equipos</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="module-item" onclick="this.classList.toggle('open')">
-                            <div class="module-header">Módulo 4: Primeros Auxilios y Actuación en Emergencias <i data-lucide="chevron-down"></i></div>
+                            <div class="module-header">Módulo 4: Emergencias y Actuación ante Incidentes <i data-lucide="chevron-down"></i></div>
                             <div class="module-content">
                                 <ul class="bullet-list">
-                                    <li>Fundamentos de Primeros Auxilios</li>
-                                    <li>Plan de Emergencia y Evacuación</li>
-                                    <li>Simulacros y Preparación</li>
+                                    <li>Planes de emergencia</li>
+                                    <li>Evacuación</li>
+                                    <li>Prevención y control de incendios</li>
+                                    <li>Primeros auxilios básicos</li>
+                                    <li>Reporte de accidentes e incidentes</li>
+                                    <li>Mejora de las condiciones de seguridad</li>
                                 </ul>
                             </div>
                         </div>
@@ -2786,33 +2924,29 @@ Leído que fue el presente contrato, las partes lo firman de conformidad.
                                 <tr>
                                     <td>1</td><td><strong>Usuarios por rol</strong></td>
                                     <td>Resumen de usuarios categorizados por rol</td><td>6 ago · 10:00</td>
-                                    <td style="display:flex;gap:8px;">
-                                        <button class="icon-btn" title="Descargar" onclick="downloadReport(1)"><i data-lucide="download"></i></button>
-                                        <button class="icon-btn" title="Visualizar" onclick="openReport(1)"><i data-lucide="eye"></i></button>
+                                    <td>
+                                        <button class="btn btn-primary" style="font-size:0.8rem;padding:6px 14px;display:inline-flex;align-items:center;gap:6px;" onclick="openReport(1)"><i data-lucide="eye" style="width:14px;height:14px;"></i> Ver reporte</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>2</td><td><strong>Capacitaciones por área</strong></td>
                                     <td>Lista de capacitaciones asignadas por área</td><td>7 ago · 21:00</td>
-                                    <td style="display:flex;gap:8px;">
-                                        <button class="icon-btn" title="Descargar" onclick="downloadReport(2)"><i data-lucide="download"></i></button>
-                                        <button class="icon-btn" title="Visualizar" onclick="openReport(2)"><i data-lucide="eye"></i></button>
+                                    <td>
+                                        <button class="btn btn-primary" style="font-size:0.8rem;padding:6px 14px;display:inline-flex;align-items:center;gap:6px;" onclick="openReport(2)"><i data-lucide="eye" style="width:14px;height:14px;"></i> Ver reporte</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>3</td><td><strong>Estado de procesos</strong></td>
                                     <td>Reporte general del estado de los procesos del sistema</td><td>4 ago · 10:00</td>
-                                    <td style="display:flex;gap:8px;">
-                                        <button class="icon-btn" title="Descargar" onclick="downloadReport(3)"><i data-lucide="download"></i></button>
-                                        <button class="icon-btn" title="Visualizar" onclick="openReport(3)"><i data-lucide="eye"></i></button>
+                                    <td>
+                                        <button class="btn btn-primary" style="font-size:0.8rem;padding:6px 14px;display:inline-flex;align-items:center;gap:6px;" onclick="openReport(3)"><i data-lucide="eye" style="width:14px;height:14px;"></i> Ver reporte</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>4</td><td><strong>Permisos asignados</strong></td>
                                     <td>Detalle de los permisos asignados por usuario</td><td>5 ago · 14:00</td>
-                                    <td style="display:flex;gap:8px;">
-                                        <button class="icon-btn" title="Descargar" onclick="downloadReport(4)"><i data-lucide="download"></i></button>
-                                        <button class="icon-btn" title="Visualizar" onclick="openReport(4)"><i data-lucide="eye"></i></button>
+                                    <td>
+                                        <button class="btn btn-primary" style="font-size:0.8rem;padding:6px 14px;display:inline-flex;align-items:center;gap:6px;" onclick="openReport(4)"><i data-lucide="eye" style="width:14px;height:14px;"></i> Ver reporte</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -2930,7 +3064,7 @@ Leído que fue el presente contrato, las partes lo firman de conformidad.
             window.downloadReport = (id) => {
                 const r = reportData[id];
                 if (!r) return;
-                // Generate plain-text CSV-like content for download
+                // Generate plain-text content for download
                 const blob = new Blob(
                     [`${r.titulo}\nGenerado: ${r.fecha}\n\n[Ver reporte en el sistema All Aboard]`],
                     { type: 'text/plain;charset=utf-8' }
@@ -2940,6 +3074,30 @@ Leído que fue el presente contrato, las partes lo firman de conformidad.
                 a.download = `${r.titulo.replace(/[^a-zA-Z0-9]/g,'_')}.txt`;
                 a.click();
                 URL.revokeObjectURL(a.href);
+
+                // Show toast notification instead of opening the file
+                const existingToast = document.getElementById('report-toast');
+                if (existingToast) existingToast.remove();
+                const toast = document.createElement('div');
+                toast.id = 'report-toast';
+                toast.innerHTML = '✅ Reporte descargado';
+                toast.style.cssText = `
+                    position:fixed; bottom:28px; right:28px; z-index:99999;
+                    background:#1a56db; color:white;
+                    padding:12px 22px; border-radius:10px;
+                    font-size:0.95rem; font-weight:600;
+                    box-shadow:0 4px 20px rgba(0,0,0,0.18);
+                    display:flex; align-items:center; gap:8px;
+                    animation:slideInToast 0.3s ease;
+                `;
+                if (!document.getElementById('toast-style')) {
+                    const style = document.createElement('style');
+                    style.id = 'toast-style';
+                    style.textContent = '@keyframes slideInToast{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}';
+                    document.head.appendChild(style);
+                }
+                document.body.appendChild(toast);
+                setTimeout(() => { toast.style.opacity='0'; toast.style.transition='opacity 0.4s'; setTimeout(()=>toast.remove(),400); }, 2500);
             };
         }
         else if (currentSidebarView === 'jefe_permisos') {
